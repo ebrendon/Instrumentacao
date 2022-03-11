@@ -18,7 +18,7 @@ Instalar as dependências necessárias:
 - Em app.js alterar o path com a porta utilizada pelo arduino na sua máquina
 - Em app.js definir a porta na linha 20, por padrão o código define a porta 5000
 - No terminal executar 'node app.js'
-- No navegador digitar 'localhost:<porta definida>'
+- No navegador digitar 'localhost:(porta definida)'
 
 
 ## Em desenvolvimento:
