@@ -23,14 +23,16 @@ Instalar as dependências necessárias:
 
 ## Em desenvolvimento:
 1. Firmware
-- [ ] Detecção de presença com MaxSonar Ez1
+- [x] Detecção de presença com MaxSonar Ez1
 - [x] Medição de distância com HC-SR04
   
 2. Servidor web
 - [x] Comunicação entre Arduino e Servidor (Back-end)
-- [ ] Exibição dos dados no navegador (Back-end)
+- [x] Exibição dos dados no navegador (Back-end)
 - [x] Protótipo do Site (Front-end)
-- [ ] Estilização (Front-end)
+- [x] Estilização (Front-end)
 - [x] Timer (Back-end)
 - [x] Coleta dos dados inseridos pelo usuário
+
+## Projeto Finalizado
 
