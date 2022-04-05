@@ -1,10 +1,12 @@
 const workTimeInput = document.querySelector("#worktime");
 const breakTimeInput = document.querySelector("#breaktime");
+const distanciaInput = document.querySelector("#distanciaIdeal");
 
 document.querySelector("form").addEventListener("submit", (e)=>{
     e.preventDefault();
     localStorage.setItem("worktime", workTimeInput.value);
     localStorage.setItem("breaktime", breakTimeInput.value);
+    localStorage.setItem("distanciaIdeal", distanciaInput.value);
     clearTimeout(initial);
     mindiv.textContent = "00";
     secdiv.textContent = "00";

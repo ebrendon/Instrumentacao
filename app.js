@@ -33,7 +33,7 @@ const port = new SerialPort({
 
 const parser = port.pipe(new ReadlineParser({ delimiter: '\r\n' }));
 parser.on('data', function(data){
-    // console.log(data);
+    console.log(data);
     io.emit('serial:data', {
         Value: data.toString()
     });
