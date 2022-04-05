@@ -100,13 +100,13 @@ int main(void) {
     PORTB = 0b11111101;
   
     configurarTimer();
-
-     // Enviar pulso de 10 us no Trigger para ativar o sensor.     
+ 
+    while(1) { 
+      // Enviar pulso de 10 us no Trigger para ativar o sensor.     
      PORTB = 0b00000010;
      _delay_us(10);
      PORTB = 0x00;
- 
-    while(1) { 
+     
       USART_TRANSFER_INT(distancia); 
       _delay_ms(1000);
     }
