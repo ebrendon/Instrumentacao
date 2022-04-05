@@ -7,7 +7,7 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 
-app.use(express.static('public'));
+app.use(express.static('public')); 
 
 app.get('/', (req, res, next) =>{
     res.sendFile(__dirname + '/public/index.html')
@@ -26,15 +26,14 @@ const { SerialPort } = require('serialport');
 const { ReadlineParser } = require('@serialport/parser-readline');
 
 const port = new SerialPort({
-    path: 'COM5', 
-    //path: '/dev/ttyACM0', 
+    // path: 'COM5', 
+    path: '/dev/ttyACM0', 
     baudRate: 9600 
 });
 
 const parser = port.pipe(new ReadlineParser({ delimiter: '\r\n' }));
 parser.on('data', function(data){
-    console.log('Serial iniciada');
-    console.log(data);
+    // console.log(data);
     io.emit('serial:data', {
         Value: data.toString()
     });

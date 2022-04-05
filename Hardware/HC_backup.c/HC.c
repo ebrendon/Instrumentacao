@@ -55,7 +55,7 @@ void setup(){
 }
 
 void loop(){
-  //Enviar pulso
+    //Enviar pulso
     PORTB = 0x10;
     _delay_us(10);
     PORTB = 0x00;
