@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+    <!--========BOOTSTRAP 5 ==========-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--FOLHA CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--=====INÍCIO HEADER======-->
+        <header>
+
+            <div id="inicio" class="row pt-4">
+
+                <!--=====INÍCIO TÍTULO=====-->
+                <div class="col-md-6">
+                    <h1 class="text-white" style="margin-top:-10px;">
+                        Temporizador
+                    </h1>
+                </div>
+                <!--======FIM TÍTULO======-->
+
+                <!--=====INÍCIO DIV BOTÕES ======-->
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-end btn-group" role="group">
+                        <a href="#" type="button" class="btn me-1 border-0">Temporizador</a>
+                        <a href="#exercicios" type="button" class="btn me-1 border-0"
+                            onclick="exercicios">Exercícios</a>
+                        <a href="#riscos" type="button" class="btn btn border-0">Ríscos</a>
+                    </div>
+                </div>
+                <!--====FIM DIV BOTÕES=====-->
+            </div>
+
+        </header>
+        <!--=====FIM HEADER======-->
+
+        <!--====INÍCIO MAIN=======-->
+        <main class="conteudo-main">
+
+            <!--====INÍCIO SEÇÃO TELA TEMPORIZADOR=======-->
+            <section class="conteudo-tela-temporizador">
+
+                <div class="row mt-5">
+
+                    <div class="col-md-4 ">
+
+                        <a href="#" class="btn-section" id="temporizador">
+                            Temporizador
+                        </a>
+
+                    </div>
+                    <div class="col-md-4 ">
+
+                        <a href="#" class="btn-section" id="intervalo">
+                            Intervalo
+                        </a>
+                    </div>
+                    <div class="col-md-4 ">
+                        <!-- <a href="#" class="btn-section" id="btn-config">
+                            Configuração
+                        </a> -->
+
+                        <button class="btn-section" id="btn-config">
+                            Configuração
+                        </button>
+                    </div>
+                </div>
+
+                <div class="conteudo-temporizador" id="conteudo__timer">
+
+
+                    <div class="content__timer">
+                        <div class="minutes">00</div>
+                        <div>:</div>
+                        <div class="seconds">00</div>
+                    </div>
+
+                    <button id="start">INICIAR</button>
+                    <button id="pause">PAUSE</button>
+                </div>
+
+                <div class="conteudo-config" id="content__config">
+                    <form action=".">
+                        <label>Worktime <input type="number" value="1" id="worktime"></label>
+                        <label>Breaktime <input type="number" value="1" id="breaktime"></label>
+                        <!-- <input type="number" value="1" id="worktime"> -->
+                        <!-- <input type="number" value="1" id="breaktime"> -->
+                        <button type="submit">SALVAR</button>
+                    </form>
+                </div>
+
+
+            </section>
+            <!--====FIM SEÇÃO TELA TEMPORIZADOR======-->
+
+            <!--====== INÍCIO SEÇÃO DISTÂNCIA ========-->
+            <section class="pt-3 mb-4">
+
+                <div class="conteudo-tela-temporizador conteudo-tela-distancia">
+                    <p>Distância do Monitor: 100cm</p>
+
+                    <!--====Círculos-->
+                    <div class="pt-3">
+                        <span class="circle c1"></span>
+                        <span class="circle c2"></span>
+                        <span class="circle c3"></span>
+                        <span class="circle c4"></span>
+                        <span class="circle c5"></span>
+                    </div>
+
+                    <p>Você está na distância ideal!</p>
+                </div>
+            </section>
+            <!--====== FIM SEÇÃO DISTÂNCIA ========-->
+
+            <!--INÍCIO SEÇÃO EXERCÍCIOS-->
+            <section id="exercicios" class="pt-5 mb-5">
+                <div class="row pt-5">
+                    <hr class="mb-5">
+                    <!--=====INÍCIO TÍTULO=====-->
+                    <div class="col-md-6">
+                        <h1 class="text-white">
+                            Exercícios
+                        </h1>
+                    </div>
+                    <!--======FIM TÍTULO======-->
+
+                    <!--=====INÍCIO DIV BOTÕES ======-->
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-end btn-group" role="group">
+                            <a href="#inicio" type="button" class="btn me-1 border-0">Temporizador</a>
+                            <a type="button" class="btn me-1 border-0" onclick="exercicios">Exercícios</a>
+                            <a href="#riscos" type="button" class="btn btn border-0">Ríscos</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="conteudo-exercicio" class="pt-5">
+
+                    <h4>2.3 Ginástica Laboral e Postura </h4><br />
+
+                    <p class="paragrafo">
+
+                        Por conta de momentos de distração, é comum que o indivíduo não sente-se de
+                        forma correta, e por passar despercebido, acaba causando problemas para o corpo. Assim,
+                        se faz necessária a introdução de um agente externo para monitorar e informá-lo tanto
+                        para que se sente adequadamente, como para realizar exercícios que auxiliam a circulação
+                        (BEZERRA et al., 2018).
+                        A introdução da Ginástica Laboral traz benefícios não só para o indivíduo, mas
+                        também para a empresa. Individualmente, ajuda a diminuir estresse, reduzir sedentarismo,
+                        melhorar postura e aumenta resistência à fadiga. Para a empresa, ajuda a reduzir acidentesde
+                        trabalho, aumenta a produtividade, melhora o relacionamento interpessoal e integração
+                        dos funcionários (LIMA; ARAÚJO; BATISTA, 2019).
+
+                    </p>
+                    <div class="imagem pt-5">
+                        <img src="assets/image/alongamento.png" alt="Alongamente - https://pin.it/4mj5Z9w">
+                    </div>
+                </div>
+
+            </section>
+            <!--FIM SEÇÃO EXERCÍCIOS-->
+
+            <!--INÍCIO SEÇÃO RÍSCOS-->
+            <section id="riscos" class="pt-5 mb-5">
+                <div class="row pt-5">
+                    <hr class="mb-5">
+                    <!--=====INÍCIO TÍTULO=====-->
+                    <div class="col-md-6">
+                        <h1 class="text-white">
+                            Ríscos
+                        </h1>
+                    </div>
+                    <!--======FIM TÍTULO======-->
+
+                    <!--=====INÍCIO DIV BOTÕES ======-->
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-end btn-group" role="group">
+                            <a href="#inicio" type="button" class="btn me-1 border-0">Temporizador</a>
+                            <a href="#exercicios" type="button" class="btn me-1 border-0" onclick="exercicios">Exercícios</a>
+                            <a type="button" class="btn btn border-0">Ríscos</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="conteudo-exercicio" class="pt-5">
+
+                    <h4>2.2 Ergonomia </h4><br />
+
+                    <p class="paragrafo">
+
+                        Sistemas de detecção e avaliação de postura vêm sendo usados com relativo sucesso
+                        no auxílio dos profissionais em ergonomia. A literatura disponível traz trabalhos reconheci-
+                        dos que tratam de objetivos semelhantes ao método proposto, constatando que o processo
+                        de avaliação ergonômica é um grande desafio.
+                        A Ergonomia surge como tecnologias e ciências que buscam adaptar o ser humano
+                        ao trabalho ou vice-versa, visando uma maior produtividade, que seja satisfatória e menos
+                        custosa ao indivíduo. Assim, o trabalho se diz ergonômico, quando a fisiologia e biomecânica
+                        são favorecidas (COELHO; DANTAS; CUNHA, 2012).
+
+                     </p> 
+                     
+                     <p class="paragrafo">
+                        As inovações tecnológicas trazem um impacto não só para as relações de troca, mas
+                        também para a produção em si. Esta produzem alterações nos instrumentos e na forma
+                        de utilizá-los no ambiente de trabalho. Assim a ergonomia busca estudar a implantação,
+                        transformações e consequências das mesmas na organização do trabalho e na vida dos
+                        empregados. A informatização e a relação entre usuário e máquina, causam problemas
+                        divididos em 3 principais áreas: visão, fadiga geral e mental e estresse (COELHO; DANTAS;
+                        CUNHA, 2012).
+                        Vale a pena dar enfoque ao estresse, já que este pode ser causado por agentes
+                        físicos e emocionais, e calcula-se que 15% dos processos trabalhistas nos EUA tem como
+                        causa o estresse, além de ser responsável por atingir 3,5% do PIB do Reino Unido.
+                         
+                      </p>  
+                      <p class="paragrafo">
+                        Os usuários de computador são os que mais reclamam de problemas físicos oriundos da
+                        ocupação. Para remediar estes problemas, o exercício físico é um dos principais recursos
+                        a ser implantado no ambiente de trabalho, devido a liberação de endorfinas que causam
+                        um sentimento de bem-estar, alívio de estresse, diminuição de depressão e ansiedade e
+                        aumento de auto-estima. Em países que foram adotadas medidas para redução de estresse,
+                        resultaram em melhora na produção e na redução de despesas de seguro saúde (MARTINS;
+                        JESUS, 1999).
+
+                    </p>
+                    <div class="imagem pt-5">
+                        <img src="assets/image/ergonomia.png" alt="Ergonomia">
+                    </div>
+                </div>
+
+            </section>
+            <!--FIM SEÇÃO EXERCÍCIOS-->
+
+        </main>
+        <!--====FIM MAIN=======-->
+    </div>
+
+
+    <!-- <script src="main.js"></script> -->
+    <script src="/assets/js/timer.js"></script>
+
+    <!--========SCRIPT BOOTSTRAP 5 ========-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!--========SCRIPT JS ========-->
+    
+</body>
+
+</html>
